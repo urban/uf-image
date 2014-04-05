@@ -1,0 +1,16 @@
+{
+  "name": "uf-image",
+  "version": "0.0.1",
+  "description": "Image placeholder web-component built using Polymer",
+  "repository": "https://gitlabdev.frogdesign.com/urban.faubion/uf-dropdown.git",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "preinstall": "npm install -g bower http-server",
+    "build": "bower install",
+    "start": "http-server ."
+  }
+}

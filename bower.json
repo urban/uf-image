@@ -1,0 +1,13 @@
+{
+  "name": "uf-image",
+  "version": "0.0.1",
+  "main": "uf-image.js",
+  "ignore": [
+    ".gitignore"
+  ],
+  "dependencies": {
+    "platform": "Polymer/platform#master",
+    "polymer": "Polymer/polymer#master"
+  },
+  "devDependencies": {}
+}

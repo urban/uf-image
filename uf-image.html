@@ -1,0 +1,57 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="uf-image" attributes="width height">
+  <template>
+    <style>
+      :host {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        position: relative;
+      }
+
+      rect {
+        stroke: #ccc;
+        stroke-width: 1px;
+        fill: transparent;
+      }
+      line {
+        stroke: #ccc;
+        stroke-width: 1px;
+      }
+
+      :host > div {
+        color: #999;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        vertical-align: middle;
+        width: 100%;
+      }
+    </style>
+    <svg width="{{width}}" height="{{height}}">
+      <rect width="100%" height="100%" />
+      <line x1="0" x2="100%" y1="0" y2="100%" />
+      <line x1="100%" x2="0" y1="0" y2="100%" />
+    </svg>
+    <template if="{{height >= 60 && width >= 60}}">
+      <div style="line-height: {{height}}px;">
+        {{width}} x {{height}}
+      </div>
+    </template>
+  </template>
+  <script>
+    Polymer('uf-image', {
+      height: null,
+      width: null,
+      heightChanged: function (oldVal, newVal) {
+        this.style.height = this.height+'px';
+      },
+      widthChanged: function (oldVal, newVal) {
+        this.style.width = this.width+'px';
+      }
+    });
+  </script>
+</polymer-element>
